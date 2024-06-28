@@ -1,3 +1,3 @@
 # -*- coding: utf-8 -*-
 
-from . import passenger, bus, bus_route
+from . import passenger, bus, bus_route, bus_schedule
