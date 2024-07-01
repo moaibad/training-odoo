@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="bus_schedule_action" model="ir.actions.act_window">
+            <field name="name">Bus Schedule</field>
+            <field name="res_model">bus.schedule</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem
+            id="transportation_root_menu"
+            name="Transportation"
+            web_icon="fi_training_odoo,static/description/icon.png" />
+
+        <menuitem
+            id="bus_schedule_menu"
+            name="Schedule"
+            parent="fi_training_odoo.transportation_root_menu"
+            action="bus_schedule_action" />
+
+    </data>
+
+</odoo>
