@@ -27,6 +27,7 @@
         'security/ir.model.access.csv',
         'views/bus_schedule_view.xml',
         'views/res_passenger_view.xml',
+        'views/res_bus_view.xml',
         'views/hr_employee_view.xml',
         'views/menuitem.xml',
     ],

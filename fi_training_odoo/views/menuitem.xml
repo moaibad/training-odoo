@@ -14,6 +14,12 @@
             <field name="view_mode">tree,form</field>
         </record>
 
+        <record id="res_bus_action" model="ir.actions.act_window">
+            <field name="name">Bus</field>
+            <field name="res_model">res.bus</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
         <menuitem
             id="transportation_root_menu"
             name="Transportation"
@@ -30,8 +36,15 @@
             id="bus_schedule_menu"
             name="Schedule"
             parent="fi_training_odoo.transportation_root_menu"
-            action="bus_schedule_action" 
+            action="bus_schedule_action"
             sequence="2" />
+
+        <menuitem
+            id="res_bus_menu"
+            name="Bus"
+            parent="fi_training_odoo.transportation_root_menu"
+            action="res_bus_action"
+            sequence="3" />
 
     </data>
 </odoo>
