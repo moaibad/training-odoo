@@ -26,17 +26,17 @@
                     <sheet>
                         <div class="oe_title">
                             <h1>
-                                <field name="name"/>
+                                <field name="name" placeholder="Schedule Name"/>
                             </h1>
                         </div>
                         <group>
                             <group>
-                                <field name="schedule"/>
+                                <field name="schedule" placeholder="Schedule"/>
                                 <field name="payment_method"/>
                             </group>
                             <group>
-                                <field name="departure"/>
-                                <field name="arrival"/>
+                                <field name="departure" placeholder="Departure Time"/>
+                                <field name="arrival" placeholder="Arrival Time"/>
                             </group>
                         </group>
                     </sheet>

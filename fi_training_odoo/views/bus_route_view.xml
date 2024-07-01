@@ -23,7 +23,7 @@
                     <sheet>
                         <group>
                             <group>
-                                <field name="name"/>
+                                <field name="name" placeholder="Route Name"/>
                             </group>
                             <group>
                             </group>

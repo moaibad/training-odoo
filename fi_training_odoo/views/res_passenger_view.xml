@@ -26,16 +26,16 @@
                     <sheet>
                         <div class="oe_title">
                             <h1>
-                                <field name="name"/>
+                                <field name="name" placeholder="Passenger's Name"/>
                             </h1>
                         </div>
                         <group>
                             <group>
-                                <field name="birth_date"/>
+                                <field name="birth_date" placeholder="Birth Date"/>
                             </group>
                             <group>
-                                <field name="weight"/>
-                                <field name="height"/>
+                                <field name="weight" placeholder="Weight"/>
+                                <field name="height" placeholder="Height"/>
                             </group>
                         </group>
                     </sheet>

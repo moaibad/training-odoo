@@ -26,13 +26,13 @@
                     <sheet>
                         <div class="oe_title">
                             <h1>
-                                <field name="name"/>
+                                <field name="name" placeholder="Bus Name"/>
                             </h1>
                         </div>
                         <group>
                             <group>
-                                <field name="code"/>
-                                <field name="capacity"/>
+                                <field name="code" placeholder="Code"/>
+                                <field name="capacity" placeholder="Bus Capacity"/>
                             </group>
                             <group>
                                 <field name="image"/>
