@@ -2,6 +2,12 @@
 <odoo>
     <data>
 
+        <record model="ir.actions.act_window" id="bus_route_action">
+            <field name="name">Route</field>
+            <field name="res_model">bus.route</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
         <record id="res_passenger_action" model="ir.actions.act_window">
             <field name="name">Passenger</field>
             <field name="res_model">res.passenger</field>
@@ -45,6 +51,18 @@
             parent="fi_training_odoo.transportation_root_menu"
             action="res_bus_action"
             sequence="3" />
+
+        <menuitem
+            id="transportation_configuration_menu"
+            name="Configuration"
+            parent="fi_training_odoo.transportation_root_menu"
+            sequence="99" />
+
+        <menuitem
+            id="bus_route_menu"
+            name="Route"
+            action="bus_route_action"
+            parent="fi_training_odoo.transportation_configuration_menu"/>
 
     </data>
 </odoo>
