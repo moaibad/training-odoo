@@ -1,2 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_fi_training_odoo_fi_training_odoo,fi_training_odoo.fi_training_odoo,model_fi_training_odoo_fi_training_odoo,base.group_user,1,1,1,1
+access_bus_schedule,access_bus_schedule,model_bus_schedule,base.group_user,1,1,1,1
