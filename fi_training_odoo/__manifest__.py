@@ -3,11 +3,17 @@
     'name': "Training Odoo (Ibad)",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        Modul untuk mengelola jadwal bus, rute, penumpang, dan integrasi dengan 
+        HR untuk penugasan bus kepada karyawan.""",
 
     'description': """
-        Long description of module's purpose
+        Modul ini dirancang untuk memudahkan pengelolaan operasional bus dalam sebuah organisasi. Modul ini menyediakan fitur untuk mengelola jadwal bus, rute, dan informasi penumpang. Selain itu, modul ini terintegrasi dengan modul HR untuk memungkinkan penugasan bus kepada karyawan, sehingga pengelolaan transportasi menjadi lebih efisien dan terorganisir.
+
+        Fitur Utama:\n
+        - Membuat dan mengelola jadwal dan rute bus
+        - Memelihara database bus dan penumpang
+        - Terintegrasi dengan modul HR untuk mengelola penugasan bus kepada karyawan
+        - Tampilan dan menu yang mudah digunakan untuk navigasi dan operasi yang mudah
     """,
 
     'author': "Mohammad Fathul'ibad",
@@ -16,7 +22,7 @@
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/16.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
-    'category': 'Uncategorized',
+    'category': 'Transportation',
     'version': '0.1',
 
     # any module necessary for this one to work correctly
