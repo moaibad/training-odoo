@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data>
+
+        <record id="res_passenger_action" model="ir.actions.act_window">
+            <field name="name">Passenger</field>
+            <field name="res_model">res.passenger</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
         <record id="bus_schedule_action" model="ir.actions.act_window">
             <field name="name">Bus Schedule</field>
             <field name="res_model">bus.schedule</field>
@@ -13,11 +20,18 @@
             web_icon="fi_training_odoo,static/description/icon.png" />
 
         <menuitem
+            id="res_passenger_menu"
+            name="Passenger"
+            action="res_passenger_action"
+            parent="fi_training_odoo.transportation_root_menu"
+            sequence="1" />
+
+        <menuitem
             id="bus_schedule_menu"
             name="Schedule"
             parent="fi_training_odoo.transportation_root_menu"
-            action="bus_schedule_action" />
+            action="bus_schedule_action" 
+            sequence="2" />
 
     </data>
-
 </odoo>
