@@ -14,3 +14,7 @@ class BusSchedule(models.Model):
         ], string='Payment')
     departure = fields.Datetime(string="Departure")
     arrival = fields.Datetime(string="Arrival")
+    bus_id = fields.Many2one(
+        comodel_name='res.bus',
+        string="Bus",
+    )
