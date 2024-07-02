@@ -7,7 +7,4 @@ class Baggage(models.Model):
 
     name = fields.Char(string='Name')
     weight = fields.Float(string='Weight(Kg)')
-    bus_schedule_id = fields.Many2one(
-        comodel_name='bus.schedule',
-        string="Bus Schedule",
-    )
+    schedule_id = fields.Many2one(comodel_name='bus.schedule', string="Bus Schedule")
