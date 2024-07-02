@@ -35,6 +35,7 @@
         'views/bus_route_view.xml',
         'views/res_passenger_view.xml',
         'views/res_bus_view.xml',
+        'views/baggage_view.xml',
         'views/hr_employee_view.xml',
         'views/menuitem.xml',
     ],

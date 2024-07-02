@@ -26,6 +26,12 @@
             <field name="view_mode">tree,form</field>
         </record>
 
+        <record id="baggage_action" model="ir.actions.act_window">
+            <field name="name">Baggage</field>
+            <field name="res_model">baggage.baggage</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
         <menuitem
             id="transportation_root_menu"
             name="Transportation"
@@ -53,6 +59,13 @@
             sequence="3" />
 
         <menuitem
+            id="baggage_menu"
+            name="Baggage"
+            parent="fi_training_odoo.transportation_root_menu"
+            action="baggage_action"
+            sequence="4" />
+
+        <menuitem
             id="transportation_configuration_menu"
             name="Configuration"
             parent="fi_training_odoo.transportation_root_menu"
@@ -62,7 +75,7 @@
             id="bus_route_menu"
             name="Route"
             action="bus_route_action"
-            parent="fi_training_odoo.transportation_configuration_menu"/>
+            parent="fi_training_odoo.transportation_configuration_menu" />
 
     </data>
 </odoo>
