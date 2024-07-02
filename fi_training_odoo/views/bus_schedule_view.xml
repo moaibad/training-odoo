@@ -44,11 +44,21 @@
                             </group>
                         </group>
                         <notebook>
-                            <page name="baggage" string="Baggage">
+                            <page name="baggage_notebook" string="Baggage">
                                 <field name="baggage_ids">
-                                    <tree create="0">
+                                    <tree>
                                         <field name="name"/>
                                         <field name="weight"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page name="passenger_notebook" string="Passenger">
+                                <field name="passenger_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="weight"/>
+                                        <field name="height"/>
+                                        <field name="birth_date"/>
                                     </tree>
                                 </field>
                             </page>

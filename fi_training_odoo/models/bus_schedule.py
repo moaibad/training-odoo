@@ -17,3 +17,4 @@ class BusSchedule(models.Model):
     bus_id = fields.Many2one(comodel_name='res.bus', string="Bus")
     route_id = fields.Many2one(comodel_name='bus.route', string="Bus Route")
     baggage_ids = fields.One2many(comodel_name='baggage.baggage', inverse_name='schedule_id', string='Baggage')
+    passenger_ids = fields.Many2many('res.passenger', string='Passenger')
