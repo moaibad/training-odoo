@@ -33,4 +33,10 @@ class BusSchedule(models.Model):
         for record in self:
             if record.capacity and len(record.passenger_ids) > record.capacity:
                 raise ValidationError("The bus is at maximum capacity..")
+            
+    @api.model
+    def create(self, vals):
+        vals['name'] = self.env['ir.sequence'].next_by_code('bus.schedule.seq')
+        return super(BusSchedule, self).create(vals)
+
     
