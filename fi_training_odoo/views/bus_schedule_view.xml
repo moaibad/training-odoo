@@ -8,10 +8,11 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="name"/>
-                    <field name="schedule"/>
+                    <field name="date_of_issue"/>
                     <field name="departure"/>
                     <field name="arrival"/>
                     <field name="bus_id"/>
+                    <field name="capacity"/>
                     <field name="route_id"/>
                 </tree>
             </field>
@@ -33,14 +34,19 @@
                         </div>
                         <group>
                             <group>
-                                <field name="schedule" placeholder="Schedule"/>
-                                <field name="payment_method"/>
-                                <field name="bus_id"/>
-                                <field name="route_id"/>
+                                <field name="date_of_issue" placeholder="Date of Issue"/>
                             </group>
                             <group>
                                 <field name="departure" placeholder="Departure Time"/>
                                 <field name="arrival" placeholder="Arrival Time"/>
+                            </group>
+                            <group>
+                                <field name="payment_method"/>
+                                <field name="route_id"/>
+                            </group>
+                            <group>
+                                <field name="bus_id"/>
+                                <field name="capacity"/>
                             </group>
                         </group>
                         <notebook>
