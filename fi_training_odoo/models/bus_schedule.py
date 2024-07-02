@@ -18,3 +18,7 @@ class BusSchedule(models.Model):
         comodel_name='res.bus',
         string="Bus",
     )
+    route_id = fields.Many2one(
+        comodel_name='bus.route',
+        string="Bus Route",
+    )
