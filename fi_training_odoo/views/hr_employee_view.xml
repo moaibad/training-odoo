@@ -13,5 +13,20 @@
                 </xpath>
             </field>
         </record>
+
+        <record id="employee_driver_action" model="ir.actions.act_window">
+            <field name="name">Driver</field>
+            <field name="res_model">hr.employee</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="domain">[('is_driver', '=', True)]</field>
+            <field name="context">{'default_is_driver': True}</field>
+        </record>
+
+        <menuitem
+            id="employee_driver_menu"
+            name="Driver"
+            parent="hr.menu_hr_employee_payroll"
+            action="employee_driver_action"
+        />
     </data>
 </odoo>
