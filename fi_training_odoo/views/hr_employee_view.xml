@@ -11,6 +11,15 @@
                     <field name="driver_license" attrs="{'invisible': [('is_driver', '=', False)]}"/>
                     <field name="driver_license_expired_date" attrs="{'invisible': [('is_driver', '=', False)]}"/>
                 </xpath>
+                <xpath expr="//notebook" position="inside">
+                    <page name="driver_information_notebook" string="Driver Information">
+                        <group string="Driver Information">
+                            <field name="name" />
+                            <field name="driver_license" />
+                            <field name="driver_license_expired_date" />
+                        </group>
+                    </page>
+                </xpath>
             </field>
         </record>
 
