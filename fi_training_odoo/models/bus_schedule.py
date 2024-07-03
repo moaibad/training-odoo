@@ -43,10 +43,3 @@ class BusSchedule(models.Model):
         vals['name'] = self.env['ir.sequence'].next_by_code('bus.schedule.seq')
         return super(BusSchedule, self).create(vals)
     
-    @api.depends('driver_id')
-    def get_driver_information(self):
-        for record in self:
-            if record:
-                return record
-
-    
