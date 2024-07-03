@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="bus_data_1" model="res.bus">
+            <field name="name">Trans Jakarta</field>
+            <field name="code">TJ001</field>
+            <field name="capacity">85</field>
+        </record>
+        <record id="bus_data_2" model="res.bus">
+            <field name="name">Damri</field>
+            <field name="code">DMR001</field>
+            <field name="capacity">55</field>
+        </record>
+        <record id="bus_data_3" model="res.bus">
+            <field name="name">Blue Bird</field>
+            <field name="code">BB001</field>
+            <field name="capacity">30</field>
+        </record>
+        <record id="bus_data_4" model="res.bus">
+            <field name="name">Primajasa</field>
+            <field name="code">PJD001</field>
+            <field name="capacity">65</field>
+        </record>
+        <record id="bus_data_5" model="res.bus">
+            <field name="name">Bhinneka</field>
+            <field name="code">BH001</field>
+            <field name="capacity">50</field>
+        </record>
+    </data>
+</odoo>

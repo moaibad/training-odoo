@@ -32,6 +32,8 @@
     'data': [
         'security/ir.model.access.csv',
         'data/sequence.xml',
+        'data/bus_data.xml',
+        'data/route_data.xml',
         'views/bus_schedule_view.xml',
         'views/bus_route_view.xml',
         'views/res_passenger_view.xml',
