@@ -7,17 +7,18 @@
             <field name="model">bus.schedule</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="name"/>
-                    <field name="date_of_issue"/>
-                    <field name="departure"/>
-                    <field name="arrival"/>
-                    <field name="bus_id"/>
-                    <field name="capacity"/>
-                    <field name="route_id"/>
+                    <field name="name" />
+                    <field name="date_of_issue" />
+                    <field name="departure" />
+                    <field name="arrival" />
+                    <field name="bus_id" />
+                    <field name="capacity" />
+                    <field name="driver_id" />
+                    <field name="route_id" />
                 </tree>
             </field>
         </record>
-        
+
         <!-- Form View -->
         <record model="ir.ui.view" id="bus_schedule_view_form">
             <field name="name">bus.schedule.view.form</field>
@@ -29,44 +30,52 @@
                     <sheet>
                         <div class="oe_title">
                             <h1>
-                                <field name="name" placeholder="Schedule Name"/>
+                                <field name="name" placeholder="Schedule Name" />
                             </h1>
                         </div>
                         <group>
                             <group>
-                                <field name="date_of_issue" placeholder="Date of Issue"/>
+                                <field name="date_of_issue" placeholder="Date of Issue" />
                             </group>
                             <group>
-                                <field name="departure" placeholder="Departure Time"/>
-                                <field name="arrival" placeholder="Arrival Time"/>
+                                <field name="departure" placeholder="Departure Time" />
+                                <field name="arrival" placeholder="Arrival Time" />
                             </group>
                             <group>
-                                <field name="payment_method"/>
-                                <field name="route_id"/>
+                                <field name="payment_method" />
+                                <field name="route_id" />
                             </group>
                             <group>
-                                <field name="bus_id"/>
-                                <field name="capacity"/>
+                                <field name="driver_id" />
+                                <field name="bus_id" />
+                                <field name="capacity" />
                             </group>
                         </group>
                         <notebook>
                             <page name="baggage_notebook" string="Baggage">
                                 <field name="baggage_ids">
                                     <tree>
-                                        <field name="name"/>
-                                        <field name="weight"/>
+                                        <field name="name" />
+                                        <field name="weight" />
                                     </tree>
                                 </field>
                             </page>
                             <page name="passenger_notebook" string="Passenger">
                                 <field name="passenger_ids">
                                     <tree>
-                                        <field name="name"/>
-                                        <field name="weight"/>
-                                        <field name="height"/>
-                                        <field name="birth_date"/>
+                                        <field name="name" />
+                                        <field name="weight" />
+                                        <field name="height" />
+                                        <field name="birth_date" />
                                     </tree>
                                 </field>
+                            </page>
+                            <page name="driver_information_notebook" string="Driver Information">
+                                <group string="Driver Information">
+                                    <field name="driver_name" />
+                                    <field name="driver_license" />
+                                    <field name="driver_license_expired_date" />
+                                </group>
                             </page>
                         </notebook>
                     </sheet>

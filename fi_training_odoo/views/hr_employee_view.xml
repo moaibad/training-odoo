@@ -8,6 +8,8 @@
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='coach_id']" position="after">
                     <field name="is_driver"/>
+                    <field name="driver_license" attrs="{'invisible': [('is_driver', '=', False)]}"/>
+                    <field name="driver_license_expired_date" attrs="{'invisible': [('is_driver', '=', False)]}"/>
                 </xpath>
             </field>
         </record>

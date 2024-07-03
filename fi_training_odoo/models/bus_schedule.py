@@ -20,8 +20,12 @@ class BusSchedule(models.Model):
     route_id = fields.Many2one(comodel_name='bus.route', string="Bus Route")
     baggage_ids = fields.One2many(comodel_name='baggage.baggage', inverse_name='schedule_id', string='Baggage')
     passenger_ids = fields.Many2many('res.passenger', string='Passenger')
-    capacity = fields.Integer(string="Capacity", related="bus_id.capacity",)
-
+    capacity = fields.Integer(string="Capacity", related="bus_id.capacity")
+    driver_id = fields.Many2one(comodel_name='hr.employee', string='Driver ', domain=[("is_driver", "=", True)])
+    driver_name = fields.Char(related='driver_id.name', string='Driver Name')
+    driver_license = fields.Char(related='driver_id.driver_license', string='Driver License')
+    driver_license_expired_date = fields.Date(related='driver_id.driver_license_expired_date')
+    
     @api.constrains('arrival', 'departure')
     def _check_arrival_time(self):
         for record in self:
@@ -38,5 +42,11 @@ class BusSchedule(models.Model):
     def create(self, vals):
         vals['name'] = self.env['ir.sequence'].next_by_code('bus.schedule.seq')
         return super(BusSchedule, self).create(vals)
+    
+    @api.depends('driver_id')
+    def get_driver_information(self):
+        for record in self:
+            if record:
+                return record
 
     
