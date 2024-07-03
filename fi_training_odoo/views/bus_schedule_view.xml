@@ -83,5 +83,21 @@
             </field>
         </record>
 
+        <record id="view_bus_schedule_search" model="ir.ui.view">
+            <field name="name">bus.schedule.search</field>
+            <field name="model">bus.schedule</field>
+            <field name="arch" type="xml">
+                <search string="Bus Schedule Search">
+                    <field name="name" />
+                    <filter string="Cash" domain="[('payment_method', 'like', 'cash')]" />
+                    <filter string="Transfer" domain="[('payment_method', 'like', 'transfer')]" />
+                    <group expand="1" string="Group By">
+                        <filter string="Route" context="{'group_by':'route_id'}" />
+                        <filter string="Bus" context="{'group_by':'bus_id'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+
     </data>
 </odoo>
