@@ -55,7 +55,9 @@ class BusSchedule(models.Model):
         
     def bus_schedule_run_button(self):
         self.state = 'on_going'
+        self.bus_id.state = 'departure'
         
     def bus_schedule_done_button(self):
         self.state = 'done'
+        self.bus_id.state = 'ready'
     
