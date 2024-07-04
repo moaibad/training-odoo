@@ -25,6 +25,12 @@ class BusSchedule(models.Model):
     driver_name = fields.Char(related='driver_id.name', string='Driver Name')
     driver_license = fields.Char(related='driver_id.driver_license', string='Driver License')
     driver_license_expired_date = fields.Date(related='driver_id.driver_license_expired_date')
+    state = fields.Selection([
+        ('draft', 'Draft'),
+        ('submitted', 'Submitted'),
+        ('on_going', 'On Going'),
+        ('done', 'Done'),
+    ], string='Status', default='draft', copy=False)
     
     @api.constrains('arrival', 'departure')
     def _check_arrival_time(self):
@@ -42,4 +48,13 @@ class BusSchedule(models.Model):
     def create(self, vals):
         vals['name'] = self.env['ir.sequence'].next_by_code('bus.schedule.seq')
         return super(BusSchedule, self).create(vals)
+    
+    def bus_schedule_submit_button(self):
+        self.state = 'submitted'
+        
+    def bus_schedule_run_button(self):
+        self.state = 'on_going'
+        
+    def bus_schedule_done_button(self):
+        self.state = 'done'
     
