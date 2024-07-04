@@ -17,7 +17,7 @@ class BusSchedule(models.Model):
         ], string='Payment', tracking=1)
     departure = fields.Datetime(string="Departure", tracking=1)
     arrival = fields.Datetime(string="Arrival", tracking=1)
-    bus_id = fields.Many2one(comodel_name='res.bus', string="Bus", tracking=1)
+    bus_id = fields.Many2one(comodel_name='res.bus', string="Bus", tracking=1, domain=[("state", "like", "ready")])
     route_id = fields.Many2one(comodel_name='bus.route', string="Bus Route")
     baggage_ids = fields.One2many(comodel_name='baggage.baggage', inverse_name='schedule_id', string='Baggage')
     passenger_ids = fields.Many2many('res.passenger', string='Passenger')
