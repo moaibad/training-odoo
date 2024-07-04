@@ -12,3 +12,9 @@ class Bus(models.Model):
     code = fields.Char(string='Code', required=True)
     capacity = fields.Integer(string='Capacity')
     image = fields.Image(string='Image')
+    state = fields.Selection([
+        ('draft', 'Draft'),
+        ('ready', 'Ready'),
+        ('maintenance', 'Maintenance'),
+        ('departure', 'Departure'),
+    ], string='Status', default='draft', copy=False)
