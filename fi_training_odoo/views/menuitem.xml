@@ -42,21 +42,24 @@
             name="Passenger"
             action="res_passenger_action"
             parent="fi_training_odoo.transportation_root_menu"
-            sequence="1" />
+            sequence="1" 
+            groups="fi_training_odoo.group_transport_staff"/>
 
         <menuitem
             id="bus_schedule_menu"
             name="Schedule"
             parent="fi_training_odoo.transportation_root_menu"
             action="bus_schedule_action"
-            sequence="2" />
+            sequence="2"
+            groups="fi_training_odoo.group_transport_driver,group_transport_staff"/> 
 
         <menuitem
             id="res_bus_menu"
             name="Bus"
             parent="fi_training_odoo.transportation_root_menu"
             action="res_bus_action"
-            sequence="3" />
+            sequence="3"
+            groups="fi_training_odoo.group_transport_manager"/>
 
         <menuitem
             id="baggage_menu"
@@ -75,7 +78,8 @@
             id="bus_route_menu"
             name="Route"
             action="bus_route_action"
-            parent="fi_training_odoo.transportation_configuration_menu" />
+            parent="fi_training_odoo.transportation_configuration_menu"
+            groups="fi_training_odoo.group_transport_manager"/>
 
     </data>
 </odoo>

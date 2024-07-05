@@ -28,9 +28,9 @@
                 <form>
                     <header>
                         <field name="state" widget="statusbar"/>
-                        <button string="Submit" name="bus_schedule_submit_button" type="object" class="oe_highlight" states='draft'/>
-                        <button string="Run" name="bus_schedule_run_button" type="object" class="oe_highlight" states='submitted'/>
-                        <button string="Done" name="bus_schedule_done_button" type="object" class="oe_highlight" states='on_going'/>
+                        <button string="Submit" name="bus_schedule_submit_button" type="object" class="oe_highlight" states='draft' groups="fi_training_odoo.group_transport_staff,fi_training_odoo.group_transport_manager"/>
+                        <button string="Run" name="bus_schedule_run_button" type="object" class="oe_highlight" states='submitted' groups="fi_training_odoo.group_transport_driver,fi_training_odoo.group_transport_staff,fi_training_odoo.group_transport_manager"/>
+                        <button string="Done" name="bus_schedule_done_button" type="object" class="oe_highlight" states='on_going' groups="fi_training_odoo.group_transport_driver,fi_training_odoo.group_transport_staff,fi_training_odoo.group_transport_manager"/>
                     </header>
                     <sheet>
                         <div class="oe_title">

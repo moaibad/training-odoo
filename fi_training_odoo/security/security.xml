@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.module.category" id="transportation_category">
+            <field name="name">Transportation</field>
+            <field name="description">Human readable name category</field>
+        </record>
+
+        <record model="ir.module.category" id="transportation_management_category">
+            <field name="name">Transportation Management</field>
+            <field name="description">Module Group for Transportation Management</field>
+            <field name="parent_id" ref="transportation_category"/>
+        </record>
+
+        <record model="res.groups" id="group_transport_driver">
+            <field name="name">Driver</field>
+            <field name="category_id" ref="transportation_management_category"/>
+        </record>
+
+        <record model="res.groups" id="group_transport_staff">
+            <field name="name">Staff</field>
+            <field name="category_id" ref="transportation_management_category"/>
+        </record>
+
+        <record model="res.groups" id="group_transport_manager">
+            <field name="name">Manager</field>
+            <field name="category_id" ref="transportation_management_category"/>
+            <field name="implied_ids" eval="[(4, ref('group_transport_staff'))]"/>
+        </record>
+    </data>
+</odoo>
