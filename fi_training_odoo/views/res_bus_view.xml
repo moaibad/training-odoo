@@ -7,15 +7,15 @@
             <field name="model">res.bus</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="name"/>
-                    <field name="code"/>
-                    <field name="capacity"/>
-                    <field name="image"/>
-                    <field name="state"/>
+                    <field name="name" />
+                    <field name="code" />
+                    <field name="capacity" />
+                    <field name="image" />
+                    <field name="state" />
                 </tree>
             </field>
         </record>
-        
+
         <!-- Form View -->
         <record model="ir.ui.view" id="res_bus_view_form">
             <field name="name">res.bus.view.form</field>
@@ -23,24 +23,34 @@
             <field name="arch" type="xml">
                 <form>
                     <header>
-                        <field name="state" widget="statusbar" options="{'clickable': 1}"/>
+                        <field name="state" widget="statusbar" options="{'clickable': 1}" />
+                        <button name="report_bus_problem"
+                            string="Report"
+                            type="object"
+                        />
                     </header>
                     <sheet>
                         <div class="oe_title">
                             <h1>
-                                <field name="name" placeholder="Bus Name"/>
+                                <field name="name" placeholder="Bus Name" />
                             </h1>
                         </div>
                         <group>
                             <group>
-                                <field name="code" placeholder="Code"/>
-                                <field name="capacity" placeholder="Bus Capacity"/>
+                                <field name="code" placeholder="Code" />
+                                <field name="capacity" placeholder="Bus Capacity" />
                             </group>
                             <group>
-                                <field name="image"/>
+                                <field name="image" />
                             </group>
                         </group>
                     </sheet>
+                    
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" />
+                        <field name="activity_ids" widget="mail_activity" />
+                        <field name="message_ids" widget="mail_thread" />
+                    </div>
                 </form>
             </field>
         </record>
