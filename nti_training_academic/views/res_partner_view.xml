@@ -9,7 +9,7 @@
                 <div name="button_box" position="inside">
                     <button class="oe_stat_button" type="object" name="show_subject_list"
                         icon="fa-book">
-                        <field string="Subjects" name="subject_count" widget="statinfo"/>
+                        <field string="Subjects" name="subject_count" widget="statinfo" style="margin-left: 10px; margin-right: 20px;"/>
                     </button>
                 </div>
                 <xpath expr="//field[@name='vat']" position="after">
