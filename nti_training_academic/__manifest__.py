@@ -20,13 +20,17 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base','web'],
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
+        'security/ir.model.access.csv',
+        'views/menuitem.xml',
+        'views/res_partner_view.xml',
+        'views/class_view.xml',
+        'views/subject_view.xml',
+        'views/show_subject_list_view.xml',
+        'report/class_class_reports.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="res_partner_view_form_inherit_nti_training_academic">
+            <field name="name">res.partner.form.nti_training.academic</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//div[contains(@class, 'oe_button_box')]" position="after">
+                    <header style="margin-bottom: 20px; padding: 6px">
+                        <div>
+                            <button name="show_subject_list"
+                                string="Subjects"
+                                type="object"
+                                class="btn-primary"
+                            />
+                        </div>
+                    </header>
+                </xpath>
+                <xpath expr="//field[@name='vat']" position="after">
+                    <field name="birthday" />
+                    <field name="age" />
+                    <field name="is_lecturer" invisible="1" />
+                    <field name="subject_line_ids" invisible="1" />
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

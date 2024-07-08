@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- List View -->
+        <record model="ir.ui.view" id="subject_view_tree">
+            <field name="name">subject.view.tree</field>
+            <field name="model">subject.subject</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="lecturer_id"/>
+                </tree>
+            </field>
+        </record>
+        
+        <!-- Form View -->
+        <record model="ir.ui.view" id="subject_view_form">
+            <field name="name">subject.view.form</field>
+            <field name="model">subject.subject</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" placeholder="Subject Name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="code"/>
+                                <field name="lecturer_id"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="subject_view_kanban" model="ir.ui.view">
+            <field name="name">subject.view.kanban</field>
+            <field name="model">subject.subject</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="lecturer_id"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_record oe_kanban_global_click" t-att-data-id="record.id">
+                                <div class="oe_kanban_content" style="padding: 15px;">
+                                    <h2><field name="name"/></h2>
+                                    <div>
+                                        <span>Code: </span>
+                                        <span class="oe_kanban_inline"><field name="code"/></span>
+                                    </div>
+                                    <div>
+                                        <span>Lecturer: </span>
+                                        <span class="oe_kanban_inline"><field name="lecturer_id"/></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+    </data>
+</odoo>

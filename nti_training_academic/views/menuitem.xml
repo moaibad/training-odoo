@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id="student_action" model="ir.actions.act_window">
+            <field name="name">Student</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="domain">[('is_lecturer', '=', False)]</field>
+            <field name="context">{'default_is_lecturer': False}</field>
+        </record>
+
+        <record id="lecturer_action" model="ir.actions.act_window">
+            <field name="name">Lecturer</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="domain">[('is_lecturer', '=', True)]</field>
+            <field name="context">{'default_is_lecturer': True}</field>
+        </record>
+
+        <record id="subjects_action" model="ir.actions.act_window">
+            <field name="name">Subjects</field>
+            <field name="res_model">subject.subject</field>
+            <field name="view_mode">kanban,tree,form</field>
+        </record>
+
+        <record id="class_action" model="ir.actions.act_window">
+            <field name="name">Class</field>
+            <field name="res_model">class.class</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem
+            id="university_root_menu"
+            name="University"
+            web_icon="nti_training_academic,static/menuitem/university.png" />
+
+        <menuitem
+            id="student_menu"
+            name="Student"
+            action="nti_training_academic.student_action"
+            parent="nti_training_academic.university_root_menu"
+            sequence="1" />
+
+        <menuitem
+            id="lecturer_menu"
+            name="Lecturer"
+            action="nti_training_academic.lecturer_action"
+            parent="nti_training_academic.university_root_menu"
+            sequence="2" />
+
+        <menuitem
+            id="subjects_menu"
+            name="Subjects"
+            action="nti_training_academic.subjects_action"
+            parent="nti_training_academic.university_root_menu"
+            sequence="3" />
+
+        <menuitem
+            id="class_menu"
+            name="Class"
+            action="nti_training_academic.class_action"
+            parent="nti_training_academic.university_root_menu"
+            sequence="4" />
+
+    </data>
+</odoo>

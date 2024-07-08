@@ -1,3 +1,3 @@
 # -*- coding: utf-8 -*-
 
-from . import models
+from . import subject, partner, subject_line, class_class
