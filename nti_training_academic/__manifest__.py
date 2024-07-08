@@ -30,6 +30,7 @@
         'views/class_view.xml',
         'views/subject_view.xml',
         'views/show_subject_list_view.xml',
+        'report/class_class_template.xml',
         'report/class_class_reports.xml',
     ],
     # only loaded in demonstration mode
