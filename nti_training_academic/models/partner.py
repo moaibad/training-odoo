@@ -8,7 +8,7 @@ class Partner(models.Model):
     age = fields.Integer(string='Age', compute='_compute_age', store=False)
     is_lecturer = fields.Boolean(string='Is Lecturer')
     subject_line_ids = fields.One2many('subject.subject', 'lecturer_id', string='Subjects')
-    
+    subject_count = fields.Integer(compute='_compute_count')
     
     @api.depends('birthday')
     def _compute_age(self):
@@ -20,6 +20,12 @@ class Partner(models.Model):
                 record.age = age
             else:
                 record.age = 0
+       
+    @api.depends('subject_line_ids')         
+    def _compute_count(self):
+        for record in self:
+            record.subject_count = self.env['subject.subject'].search_count(
+                [('lecturer_id', '=', self.id)])
              
     def show_subject_list(self):
         return {

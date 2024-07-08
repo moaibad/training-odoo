@@ -6,17 +6,12 @@
             <field name="model">res.partner</field>
             <field name="inherit_id" ref="base.view_partner_form" />
             <field name="arch" type="xml">
-                <xpath expr="//div[contains(@class, 'oe_button_box')]" position="after">
-                    <header style="margin-bottom: 20px; padding: 6px">
-                        <div>
-                            <button name="show_subject_list"
-                                string="Subjects"
-                                type="object"
-                                class="btn-primary"
-                            />
-                        </div>
-                    </header>
-                </xpath>
+                <div name="button_box" position="inside">
+                    <button class="oe_stat_button" type="object" name="show_subject_list"
+                        icon="fa-book">
+                        <field string="Subjects" name="subject_count" widget="statinfo"/>
+                    </button>
+                </div>
                 <xpath expr="//field[@name='vat']" position="after">
                     <field name="birthday" />
                     <field name="age" />
