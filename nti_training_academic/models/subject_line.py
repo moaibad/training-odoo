@@ -7,7 +7,8 @@ class SubjectLine(models.Model):
 
     subject_id = fields.Many2one(
         comodel_name='subject.subject',
-        string="Subject"
+        string="Subject",
+        required=True
     )
     lecturer_id = fields.Many2one(
         comodel_name='res.partner',

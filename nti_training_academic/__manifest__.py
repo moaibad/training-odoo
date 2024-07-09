@@ -1,22 +1,24 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "nti_training_academic",
+    'name': "Academic Management",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        A module to manage academic activities at the university, 
+        including subjects, lecturers, students, and classes.""",
+
 
     'description': """
-        Long description of module's purpose
+        This module helps in managing university academics by providing 
+        features to manage subjects, lecturers, students, and class schedules.
     """,
 
-    'author': "My Company",
-    'website': "https://www.yourcompany.com",
+    'author': "Neural Technologies Indonesia",
+    'website': "http://www.nti.co.id",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/16.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
-    'category': 'Uncategorized',
+    'category': 'Education',
     'version': '0.1',
 
     # any module necessary for this one to work correctly
